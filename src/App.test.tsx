@@ -22,16 +22,17 @@ describe('landing page', () => {
     expect(heroVideo).toHaveAttribute('poster', '/assets/busemnaczas-hero-brand.webp')
     expect(heroVideo).toHaveProperty('muted', true)
     expect(heroVideo.querySelector('source')).toHaveAttribute('src', '/assets/busemnaczas-hero.mp4')
+    expect(screen.getByTestId('hero-cloud-layer')).toHaveAttribute('data-motion', 'subtle')
   })
 
   it('switches vehicles and renders gallery placeholders', async () => {
     const user = userEvent.setup()
     render(<App />)
-    expect(screen.getByAltText(/Renault Trafic brązowy/)).toHaveAttribute('src', '/assets/renault-trafic-brazowy.webp')
+    expect(screen.getByAltText(/Renault Trafic brązowy/)).toHaveAttribute('src', '/assets/renault-trafic-brazowy-portrait.png')
     await user.click(screen.getByRole('tab', { name: 'Stalowy' }))
     expect(await screen.findByText('Hak holowniczy')).toBeInTheDocument()
-    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy.webp')
-    expect(screen.getAllByText('Zdjęcie wkrótce')).toHaveLength(12)
+    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy-portrait.png')
+    expect(screen.getAllByText('Zdjęcie wkrótce')).toHaveLength(9)
   })
 
   it('opens and closes the mobile navigation', async () => {

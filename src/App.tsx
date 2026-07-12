@@ -51,6 +51,7 @@ function App() {
           <video className="hero-video" aria-label="Renault Trafic BusemNaCzas.pl w trasie" autoPlay muted loop playsInline preload="metadata" poster="/assets/busemnaczas-hero-brand.webp">
             <source src="/assets/busemnaczas-hero.mp4" type="video/mp4" />
           </video>
+          <span className="hero-cloud-layer" data-testid="hero-cloud-layer" data-motion="subtle" aria-hidden="true" />
         </div>
       </section>
 
@@ -82,7 +83,7 @@ function App() {
 
       <section className="section pricing-section" id="cennik"><div className="container"><Reveal><SectionHeading label="Cennik" title="Im dłuższa podróż, tym lepsza stawka." copy="Każda cena zawiera pełne ubezpieczenie OC i AC." /></Reveal><div className="pricing-grid">{siteContent.pricing.map((tier) => <Reveal key={tier.duration} className={`price-card ${tier.recommended ? 'recommended' : ''}`}>{tier.recommended && <span className="recommended-label">Najczęściej wybierane</span>}<p>{tier.duration}</p><h3><strong>{tier.price}</strong> zł</h3><span>za dobę</span><div><Gauge />{tier.limit}</div><a href="#kontakt">Zapytaj o termin</a></Reveal>)}</div><Reveal className="pricing-notes"><p><strong>Nadprzebieg:</strong> 1 zł/km.</p><p>Doba liczona jest od godziny odbioru. Przekroczenie o 1–2 godziny może zostać zaakceptowane po wcześniejszej informacji.</p><p>Najem długoterminowy wyceniamy indywidualnie.</p></Reveal></div></section>
 
-      <section className="section"><div className="container"><Reveal><SectionHeading label="Usługi dodatkowe" title="Jeszcze mniej logistyki po Twojej stronie." /></Reveal><div className="service-row"><Reveal className="service-item"><Truck /><div><h3>Podstawienie i odbiór</h3><p>Pod wskazany adres, licząc od miejsca postoju pojazdu.</p></div><strong>5 zł/km</strong></Reveal><Reveal className="service-item"><Bike /><div><h3>Bagażnik rowerowy</h3><p>Wersja 3-miejscowa, dostępna z pojazdem wyposażonym w hak.</p></div><strong>80 zł</strong></Reveal><Reveal className="service-item service-muted"><Route /><div><h3>Kolejne akcesoria</h3><p>Oferta wyposażenia dodatkowego będzie rozwijana.</p></div><strong>Wkrótce</strong></Reveal></div></div></section>
+      <section className="section services-section"><div className="container"><Reveal><SectionHeading label="Usługi dodatkowe" title="Jeszcze mniej logistyki po Twojej stronie." /></Reveal><div className="service-row"><Reveal className="service-item"><Truck /><div><h3>Podstawienie i odbiór</h3><p>Pod wskazany adres, licząc od miejsca postoju pojazdu.</p></div><strong>5 zł/km</strong></Reveal><Reveal className="service-item"><Bike /><div><h3>Bagażnik rowerowy</h3><p>Wersja 3-miejscowa, dostępna z pojazdem wyposażonym w hak.</p></div><strong>80 zł</strong></Reveal><Reveal className="service-item service-muted"><Route /><div><h3>Kolejne akcesoria</h3><p>Oferta wyposażenia dodatkowego będzie rozwijana.</p></div><strong>Wkrótce</strong></Reveal></div></div></section>
 
       <section className="section soft-section"><div className="container testimonial-grid"><Reveal><SectionHeading label="Opinie" title="Podróż zaczyna się od dobrego wyboru." copy="Miejsce przygotowane na przyszłe, zweryfikowane recenzje klientów." /></Reveal><Reveal><Testimonials /></Reveal></div></section>
 

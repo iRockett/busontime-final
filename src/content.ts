@@ -9,13 +9,13 @@ export const siteContent = {
   vehicles: [
     {
       id: 'brazowy', name: 'Renault Trafic', finish: 'Brązowy',
-      image: '/assets/renault-trafic-brazowy.webp',
+      image: '/assets/renault-trafic-brazowy-portrait.png',
       specs: ['9 miejsc', 'Manualna skrzynia', '1.6 dCi BiTurbo (125 KM)', 'Diesel · ok. 8 l/100 km', 'EURO 5'],
       equipment: ['Klimatyzacja dwustrefowa', 'Wersja LONG i duży bagażnik', 'Przyciemniane tylne szyby', '2× ISOFIX', 'Radio Bluetooth', 'Czujniki parkowania tył', 'Tempomat'],
     },
     {
       id: 'stalowy', name: 'Renault Trafic', finish: 'Stalowy',
-      image: '/assets/renault-trafic-stalowy.webp',
+      image: '/assets/renault-trafic-stalowy-portrait.png',
       specs: ['9 miejsc', 'Manualna skrzynia', '1.6 dCi BiTurbo (125 KM)', 'Diesel · ok. 8 l/100 km', 'EURO 5'],
       equipment: ['Klimatyzacja dwustrefowa', 'Wersja LONG i duży bagażnik', 'Przyciemniane tylne szyby', '2× ISOFIX', 'Radio Bluetooth', 'Czujniki parkowania tył', 'Tempomat', 'Hak holowniczy'],
     },
