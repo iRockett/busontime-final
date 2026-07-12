@@ -162,7 +162,7 @@ img { display: block; max-width: 100%; }
 .testimonial-dots { display: flex; gap: 7px; margin-top: 26px; }
 .testimonial-dots button { width: 22px; height: 3px; padding: 0; border: 0; border-radius: 5px; background: #cfd6df; }
 .testimonial-dots button[aria-current=true] { background: var(--blue); }
-.placeholder-note { margin: 20px 0 0; color: #8b929b; font-size: 10px; line-height: 1.4; }
+.placeholder-note { display: none; }
 .faq-grid { display: grid; grid-template-columns: .75fr 1.25fr; gap: 90px; }
 .faq-grid .section-heading { margin-bottom: 25px; }
 .text-link { color: var(--blue); font-weight: 600; }
