@@ -1,0 +1,1 @@
+{"nodes": [{"id": "busnaczas_final_pnpm_workspace_esbuild", "label": "esbuild build approval", "type": "build_configuration", "file_type": "code", "source_file": "pnpm-workspace.yaml"}], "edges": [], "hyperedges": []}

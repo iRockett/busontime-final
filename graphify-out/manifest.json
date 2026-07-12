@@ -1,0 +1,297 @@
+{
+  "package.json": {
+    "mtime": 1783797660.6678498,
+    "ast_hash": "2ce6656ec6e787b80f94370b565ca8ae",
+    "semantic_hash": "2ce6656ec6e787b80f94370b565ca8ae"
+  },
+  "postcss.config.js": {
+    "mtime": 1783791734.0595922,
+    "ast_hash": "bac55ffb0fef2a6b45aa3b70e015f698",
+    "semantic_hash": "bac55ffb0fef2a6b45aa3b70e015f698"
+  },
+  "src/App.test.tsx": {
+    "mtime": 1783806943.6025867,
+    "ast_hash": "787933b7780ab28fff05432c9b9069fd",
+    "semantic_hash": "787933b7780ab28fff05432c9b9069fd"
+  },
+  "src/App.tsx": {
+    "mtime": 1783807188.2102966,
+    "ast_hash": "809e8ed0f8a103fe1d1cb7a7da6891d5",
+    "semantic_hash": "809e8ed0f8a103fe1d1cb7a7da6891d5"
+  },
+  "src/components/Contact.tsx": {
+    "mtime": 1783792504.0413055,
+    "ast_hash": "41eb76eb5aaae1511a5e975141da4776",
+    "semantic_hash": "41eb76eb5aaae1511a5e975141da4776"
+  },
+  "src/components/Faq.tsx": {
+    "mtime": 1783792948.7002335,
+    "ast_hash": "76d1198629ae65d98901fcacada8d237",
+    "semantic_hash": "76d1198629ae65d98901fcacada8d237"
+  },
+  "src/components/Gallery.tsx": {
+    "mtime": 1783795190.4562795,
+    "ast_hash": "67264ab43d98c04bfdcab9c695990d66",
+    "semantic_hash": "67264ab43d98c04bfdcab9c695990d66"
+  },
+  "src/components/Nav.tsx": {
+    "mtime": 1783795185.1051848,
+    "ast_hash": "1a2de696d72a4daea16177c58a29fd63",
+    "semantic_hash": "1a2de696d72a4daea16177c58a29fd63"
+  },
+  "src/components/Reveal.tsx": {
+    "mtime": 1783792483.6519294,
+    "ast_hash": "8c6a287231a8b40158f5890024752f29",
+    "semantic_hash": "8c6a287231a8b40158f5890024752f29"
+  },
+  "src/components/Testimonials.tsx": {
+    "mtime": 1783792497.2624536,
+    "ast_hash": "6bfed16669472d4a187f08710d411427",
+    "semantic_hash": "6bfed16669472d4a187f08710d411427"
+  },
+  "src/components/VehicleShowcase.tsx": {
+    "mtime": 1783805949.050348,
+    "ast_hash": "a1bd3cd95c30ad8a6a03e0072f5a3b07",
+    "semantic_hash": "a1bd3cd95c30ad8a6a03e0072f5a3b07"
+  },
+  "src/content.test.ts": {
+    "mtime": 1783791741.23952,
+    "ast_hash": "dcc249675a5cc765487d5123981e00bd",
+    "semantic_hash": "dcc249675a5cc765487d5123981e00bd"
+  },
+  "src/content.ts": {
+    "mtime": 1783795182.4526925,
+    "ast_hash": "5e91aef46ca106d7a67f0a14b976c923",
+    "semantic_hash": "5e91aef46ca106d7a67f0a14b976c923"
+  },
+  "src/main.tsx": {
+    "mtime": 1783792594.9248526,
+    "ast_hash": "aff16939a6bc3ccc201c8dbc0e754ff2",
+    "semantic_hash": "aff16939a6bc3ccc201c8dbc0e754ff2"
+  },
+  "src/test/setup.ts": {
+    "mtime": 1783792998.3493886,
+    "ast_hash": "ea05ff7432225fcfe5e798e95f854718",
+    "semantic_hash": "ea05ff7432225fcfe5e798e95f854718"
+  },
+  "tailwind.config.js": {
+    "mtime": 1783791731.648007,
+    "ast_hash": "4d649fd5fb5e67a3066f220e8c4fdc10",
+    "semantic_hash": "4d649fd5fb5e67a3066f220e8c4fdc10"
+  },
+  "tsconfig.app.json": {
+    "mtime": 1783791724.1398065,
+    "ast_hash": "6200194d92c6a8894f8698e3ed1a4e58",
+    "semantic_hash": "6200194d92c6a8894f8698e3ed1a4e58"
+  },
+  "tsconfig.json": {
+    "mtime": 1783791721.5611548,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": "a3d39fa780ebff65444de257f291ce6c"
+  },
+  "tsconfig.node.json": {
+    "mtime": 1783798141.0713923,
+    "ast_hash": "36f75ed37a4c367a1e026eb87bd3ae4c",
+    "semantic_hash": "36f75ed37a4c367a1e026eb87bd3ae4c"
+  },
+  "vite.config.ts": {
+    "mtime": 1783799611.160202,
+    "ast_hash": "589337f2bd820df2764f272a100b3c27",
+    "semantic_hash": "589337f2bd820df2764f272a100b3c27"
+  },
+  "vitest.config.ts": {
+    "mtime": 1783798138.1204438,
+    "ast_hash": "5b291459e5ebc96243f09d00e10991c7",
+    "semantic_hash": "5b291459e5ebc96243f09d00e10991c7"
+  },
+  "work/convert_hero.py": {
+    "mtime": 1783793855.6820474,
+    "ast_hash": "cf2d3a64bd2d9a602384a0462a671ea2",
+    "semantic_hash": "cf2d3a64bd2d9a602384a0462a671ea2"
+  },
+  "work/convert_vehicle_images.py": {
+    "mtime": 1783795095.1754024,
+    "ast_hash": "eab0890fec4e33883270a40c4c2c9ec9",
+    "semantic_hash": "eab0890fec4e33883270a40c4c2c9ec9"
+  },
+  "work/extract_pdf.py": {
+    "mtime": 1783791445.308225,
+    "ast_hash": "f41eeb130147925a05c66e25e7d593de",
+    "semantic_hash": "f41eeb130147925a05c66e25e7d593de"
+  },
+  "work/prepare_assets.py": {
+    "mtime": 1783792411.0233288,
+    "ast_hash": "e8d315dff1831fcafb831a7013566c77",
+    "semantic_hash": "e8d315dff1831fcafb831a7013566c77"
+  },
+  "PRODUCT.md": {
+    "mtime": 1783805235.2595508,
+    "ast_hash": "44675656ae76c3ab0d16cefc9ba3095c",
+    "semantic_hash": "44675656ae76c3ab0d16cefc9ba3095c"
+  },
+  "docs/superpowers/plans/2026-07-11-busemnaczas-landing-page.md": {
+    "mtime": 1783791577.6919231,
+    "ast_hash": "04649130ed66cdf528f869ae9e187611",
+    "semantic_hash": "04649130ed66cdf528f869ae9e187611"
+  },
+  "docs/superpowers/plans/2026-07-11-hero-video.md": {
+    "mtime": 1783806904.249283,
+    "ast_hash": "048408c4dd88b25142a60f2c516626ee",
+    "semantic_hash": "048408c4dd88b25142a60f2c516626ee"
+  },
+  "docs/superpowers/plans/2026-07-11-landing-page-visual-refinement.md": {
+    "mtime": 1783805740.0255487,
+    "ast_hash": "8ef2b973227f2f2aa34c1ae5b272712f",
+    "semantic_hash": "8ef2b973227f2f2aa34c1ae5b272712f"
+  },
+  "docs/superpowers/specs/2026-07-11-busemnaczas-design.md": {
+    "mtime": 1783791573.997757,
+    "ast_hash": "209ba5513047911d3619cc247b6000a3",
+    "semantic_hash": "209ba5513047911d3619cc247b6000a3"
+  },
+  "docs/superpowers/specs/2026-07-11-hero-video-design.md": {
+    "mtime": 1783806902.0470977,
+    "ast_hash": "74b1256e7e93ebf9cd9795ba5d335007",
+    "semantic_hash": "74b1256e7e93ebf9cd9795ba5d335007"
+  },
+  "docs/superpowers/specs/2026-07-11-vehicle-image-framing-design.md": {
+    "mtime": 1783805236.9705122,
+    "ast_hash": "e548580f325f81194343fffdee494788",
+    "semantic_hash": "e548580f325f81194343fffdee494788"
+  },
+  "index.html": {
+    "mtime": 1783793894.347066,
+    "ast_hash": "55d6191f1fc201a4a60ee18ef0eaa2d1",
+    "semantic_hash": "55d6191f1fc201a4a60ee18ef0eaa2d1"
+  },
+  "pnpm-workspace.yaml": {
+    "mtime": 1783792138.4137173,
+    "ast_hash": "b742abf2d03aa9d79c3290767176eb41",
+    "semantic_hash": "b742abf2d03aa9d79c3290767176eb41"
+  },
+  "public/robots.txt": {
+    "mtime": 1783792602.8413372,
+    "ast_hash": "b8d6deb842b361fbe849702b9ee83e50",
+    "semantic_hash": "b8d6deb842b361fbe849702b9ee83e50"
+  },
+  "outputs/busemnaczas-concept.webp": {
+    "mtime": 1783792415.2576468,
+    "ast_hash": "ff714bb7a261659de84caffdb0c34863",
+    "semantic_hash": "ff714bb7a261659de84caffdb0c34863"
+  },
+  "outputs/busemnaczas-desktop.png": {
+    "mtime": 1783793315.0968597,
+    "ast_hash": "1d004a314d58e642c267e00f79d4dad4",
+    "semantic_hash": "1d004a314d58e642c267e00f79d4dad4"
+  },
+  "outputs/busemnaczas-hero-update-desktop.png": {
+    "mtime": 1783794009.439036,
+    "ast_hash": "2d36aaca3439cb59626b5cd197cf81b4",
+    "semantic_hash": "2d36aaca3439cb59626b5cd197cf81b4"
+  },
+  "outputs/busemnaczas-hero-update-mobile.png": {
+    "mtime": 1783794009.8299856,
+    "ast_hash": "2f4be864808d355b28f43e69135ec67c",
+    "semantic_hash": "2f4be864808d355b28f43e69135ec67c"
+  },
+  "outputs/busemnaczas-mobile.png": {
+    "mtime": 1783793332.2266467,
+    "ast_hash": "628371c6feebaa828c4779ba06273c6c",
+    "semantic_hash": "628371c6feebaa828c4779ba06273c6c"
+  },
+  "outputs/busemnaczas-v2-desktop.png": {
+    "mtime": 1783795548.650259,
+    "ast_hash": "b153666d0b2c9a98bc27cbee9f9d233c",
+    "semantic_hash": "b153666d0b2c9a98bc27cbee9f9d233c"
+  },
+  "outputs/busemnaczas-v2-hero.png": {
+    "mtime": 1783795661.1065814,
+    "ast_hash": "dbbf2a116ac7ae21f179a4ded0f35b5c",
+    "semantic_hash": "dbbf2a116ac7ae21f179a4ded0f35b5c"
+  },
+  "outputs/busemnaczas-v2-intro.png": {
+    "mtime": 1783795594.1047578,
+    "ast_hash": "14116a1d390ae739794156ed09d094eb",
+    "semantic_hash": "14116a1d390ae739794156ed09d094eb"
+  },
+  "outputs/busemnaczas-v2-mobile.png": {
+    "mtime": 1783795780.7986536,
+    "ast_hash": "525f3cff1e001074920d6a31043fb049",
+    "semantic_hash": "525f3cff1e001074920d6a31043fb049"
+  },
+  "public/assets/busemnaczas-hero-brand.png": {
+    "mtime": 1783793653.7653441,
+    "ast_hash": "7f23be25e850233bf75a8ff073579898",
+    "semantic_hash": "7f23be25e850233bf75a8ff073579898"
+  },
+  "public/assets/busemnaczas-hero-brand.webp": {
+    "mtime": 1783793857.99379,
+    "ast_hash": "709c44cda1c53e6bcdce339612fea73e",
+    "semantic_hash": "709c44cda1c53e6bcdce339612fea73e"
+  },
+  "public/assets/gallery-01.webp": {
+    "mtime": 1783792413.9260044,
+    "ast_hash": "06c358b1c800a8eca1c968bfea69eb9d",
+    "semantic_hash": "06c358b1c800a8eca1c968bfea69eb9d"
+  },
+  "public/assets/gallery-02.webp": {
+    "mtime": 1783792414.1338098,
+    "ast_hash": "cdbdda6dc6095b3e7a1bcdd8d295d1a7",
+    "semantic_hash": "cdbdda6dc6095b3e7a1bcdd8d295d1a7"
+  },
+  "public/assets/gallery-03.webp": {
+    "mtime": 1783792414.2805104,
+    "ast_hash": "7272ddd10a8b9957560b761095917124",
+    "semantic_hash": "7272ddd10a8b9957560b761095917124"
+  },
+  "public/assets/gallery-04.webp": {
+    "mtime": 1783792414.475564,
+    "ast_hash": "0ed77128167f10c9e4a743fca861b5b7",
+    "semantic_hash": "0ed77128167f10c9e4a743fca861b5b7"
+  },
+  "public/assets/gallery-05.webp": {
+    "mtime": 1783792414.6091354,
+    "ast_hash": "434704786e321e5f8dd2cc57b6c84c83",
+    "semantic_hash": "434704786e321e5f8dd2cc57b6c84c83"
+  },
+  "public/assets/gallery-06.webp": {
+    "mtime": 1783792414.8416462,
+    "ast_hash": "2db0fb3d04211578730d1ecb5a23bacf",
+    "semantic_hash": "2db0fb3d04211578730d1ecb5a23bacf"
+  },
+  "public/assets/renault-trafic-brazowy.png": {
+    "mtime": 1783794528.663189,
+    "ast_hash": "c7e698048205ec0b3b9ba8d7a48114b0",
+    "semantic_hash": "c7e698048205ec0b3b9ba8d7a48114b0"
+  },
+  "public/assets/renault-trafic-brazowy.webp": {
+    "mtime": 1783795097.3367915,
+    "ast_hash": "6f4e9ca814535b5accfd2c8fa6c67c99",
+    "semantic_hash": "6f4e9ca814535b5accfd2c8fa6c67c99"
+  },
+  "public/assets/renault-trafic-hero.webp": {
+    "mtime": 1783792413.6534297,
+    "ast_hash": "3bd65439c95eabba57bef7c7f00f15b2",
+    "semantic_hash": "3bd65439c95eabba57bef7c7f00f15b2"
+  },
+  "public/assets/renault-trafic-stalowy.png": {
+    "mtime": 1783795015.9916458,
+    "ast_hash": "ffeda1877f31d78cab11dd37c634a1f5",
+    "semantic_hash": "ffeda1877f31d78cab11dd37c634a1f5"
+  },
+  "public/assets/renault-trafic-stalowy.webp": {
+    "mtime": 1783795097.8543127,
+    "ast_hash": "7ab4868baa9779618dfac9d8f496780a",
+    "semantic_hash": "7ab4868baa9779618dfac9d8f496780a"
+  },
+  "work/busemnaczas-concept.webp": {
+    "mtime": 1783792415.2576468,
+    "ast_hash": "ff714bb7a261659de84caffdb0c34863",
+    "semantic_hash": "ff714bb7a261659de84caffdb0c34863"
+  },
+  "public/assets/busemnaczas-hero.mp4": {
+    "mtime": 1783807066.7233973,
+    "ast_hash": "f313d10c7820b7369b62cfb76bb16f12",
+    "semantic_hash": "f313d10c7820b7369b62cfb76bb16f12"
+  }
+}
