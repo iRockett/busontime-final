@@ -91,7 +91,7 @@ function App() {
 
       <section className="contact-section" id="kontakt"><div className="container"><Contact /></div></section>
     </main>
-    <footer className="footer"><div className="container footer-top"><nav aria-label="Stopka">{siteContent.nav.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav><a href={siteContent.phone.href}>{siteContent.phone.display}</a></div><div className="container footer-bottom"><span>© 2026 BusemNaCzas.pl</span><span>Polityka prywatności</span><a href="https://maps.google.com/?q=Wieruszów" target="_blank" rel="noreferrer">Google Maps</a></div></footer>
+    <footer className="footer"><div className="container footer-top"><a className="footer-brand" href="#top" aria-label="BusemNaCzas.pl — strona główna"><img src="/assets/busemnaczas-footer-logo.png" alt="BusemNaCzas.pl" /></a><nav aria-label="Stopka">{siteContent.nav.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav><a href={siteContent.phone.href}>{siteContent.phone.display}</a></div><div className="container footer-bottom"><span>© 2026 BusemNaCzas.pl</span><span>Polityka prywatności</span><a href="https://maps.google.com/?q=Wieruszów" target="_blank" rel="noreferrer">Google Maps</a></div></footer>
     <div className="mobile-cta"><a href={siteContent.phone.href}><Phone />Zadzwoń</a><a href="#kontakt">Zarezerwuj</a></div>
   </MotionConfig>
 }

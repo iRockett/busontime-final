@@ -10,7 +10,7 @@ describe('landing page', () => {
     expect(screen.getByRole('heading', { name: '300 zł' })).toBeInTheDocument()
     expect(screen.getAllByRole('link', { name: 'Zarezerwuj' }).length).toBeGreaterThan(1)
     expect(screen.getAllByRole('link', { name: /514 574 594/ })[0]).toHaveAttribute('href', 'tel:+48514574594')
-    expect(screen.queryByLabelText('BusemNaCzas.pl — strona główna')).not.toBeInTheDocument()
+    expect(screen.getByLabelText('BusemNaCzas.pl — strona główna')).toBeInTheDocument()
     expect(screen.queryByText('k. Wieruszowa')).not.toBeInTheDocument()
     expect(screen.queryByText('k. Kępna')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Dwa busy. Pełna swoboda podróży.' })).toBeInTheDocument()
@@ -25,14 +25,15 @@ describe('landing page', () => {
     expect(screen.getByTestId('hero-cloud-layer')).toHaveAttribute('data-motion', 'subtle')
   })
 
-  it('switches vehicles and renders gallery placeholders', async () => {
+  it('switches vehicles and renders the photo gallery', async () => {
     const user = userEvent.setup()
     render(<App />)
     expect(screen.getByAltText(/Renault Trafic brązowy/)).toHaveAttribute('src', '/assets/renault-trafic-brazowy-portrait.png')
     await user.click(screen.getByRole('tab', { name: 'Stalowy' }))
     expect(await screen.findByText('Hak holowniczy')).toBeInTheDocument()
-    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy-portrait.png')
-    expect(screen.getAllByText('Zdjęcie wkrótce')).toHaveLength(9)
+    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy-portrait-extended.png')
+    expect(screen.getByRole('img', { name: 'Szary Renault Trafic z przodu' })).toHaveAttribute('src', '/assets/gallery-02.png')
+    expect(screen.getAllByRole('img', { name: /Renault Trafic/ }).length).toBe(7)
   })
 
   it('opens and closes the mobile navigation', async () => {
