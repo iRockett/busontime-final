@@ -114,6 +114,7 @@ img { display: block; max-width: 100%; }
 .map-frame iframe { width: 100%; height: 100%; border: 0; filter: saturate(.65) contrast(1.05); }
 .gallery-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .gallery-tile, .gallery-tile:nth-child(n) { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; border: 0; padding: 0; overflow: hidden; border-radius: 16px; background: var(--soft); cursor: zoom-in; }
+.gallery-tile:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; }
 .gallery-tile img { width: 100%; height: 100%; object-fit: cover; }
 .gallery-placeholder { position: relative; padding: 24px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; border: 1px dashed #cdd6e1; color: #7c8793; background: #f7f9fb; cursor: default; text-align: left; }
 .gallery-placeholder::after { content: ''; position: absolute; inset: 18px; border: 1px solid rgba(148,160,174,.18); border-radius: 10px; pointer-events: none; }
@@ -121,7 +122,7 @@ img { display: block; max-width: 100%; }
 .gallery-placeholder p { position: relative; z-index: 1; margin: 0; color: #59636e; font: 600 17px 'Inter Tight'; }
 .lightbox { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; padding: 64px; background: rgba(8,11,14,.92); backdrop-filter: blur(12px); }
 .lightbox img { max-width: min(1200px, 90vw); max-height: 84vh; border-radius: 16px; }
-.lightbox button { position: absolute; top: 24px; right: 24px; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: #fff; background: rgba(255,255,255,.08); }
+.lightbox button { position: absolute; top: 24px; right: 24px; width: 48px; height: 48px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: #fff; background: rgba(255,255,255,.08); font-size: 30px; line-height: 1; cursor: pointer; }
 .pricing-section { background: var(--soft); }
 .pricing-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .price-card { position: relative; min-height: 360px; padding: 32px; display: flex; flex-direction: column; border: 1px solid #dfe5ec; border-radius: 16px; background: #fff; transition: transform .3s, box-shadow .3s; }

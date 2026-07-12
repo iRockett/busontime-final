@@ -34,6 +34,10 @@ describe('landing page', () => {
     expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy-portrait-extended.png')
     expect(screen.getByRole('img', { name: 'Szary Renault Trafic z przodu' })).toHaveAttribute('src', '/assets/gallery-02.png')
     expect(screen.getAllByRole('img', { name: /Renault Trafic/ }).length).toBe(7)
+    await user.click(screen.getByRole('button', { name: 'Powiększ zdjęcie: Szary Renault Trafic z przodu' }))
+    expect(screen.getByRole('dialog', { name: 'Szary Renault Trafic z przodu' })).toBeInTheDocument()
+    await user.click(screen.getByRole('button', { name: 'Zamknij podgląd' }))
+    expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
   })
 
   it('opens and closes the mobile navigation', async () => {

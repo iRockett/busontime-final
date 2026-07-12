@@ -8,5 +8,21 @@ const galleryImages = [
 ]
 
 export function Gallery() {
-  return <div className="gallery-grid" aria-label="Galeria zdjęć">{galleryImages.map(([src, alt]) => <div key={src} className="gallery-tile"><img src={src} alt={alt} loading="lazy" /></div>)}</div>
+  const [activeImage, setActiveImage] = useState<number | null>(null)
+
+  useEffect(() => {
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setActiveImage(null)
+    }
+    window.addEventListener('keydown', closeOnEscape)
+    return () => window.removeEventListener('keydown', closeOnEscape)
+  }, [])
+
+  const active = activeImage === null ? null : galleryImages[activeImage]
+
+  return <>
+    <div className="gallery-grid" aria-label="Galeria zdjęć">{galleryImages.map(([src, alt], index) => <button key={src} className="gallery-tile" type="button" onClick={() => setActiveImage(index)} aria-label={`Powiększ zdjęcie: ${alt}`}><img src={src} alt={alt} loading="lazy" /></button>)}</div>
+    {active && <div className="lightbox" role="dialog" aria-modal="true" aria-label={active[1]} onClick={(event) => { if (event.target === event.currentTarget) setActiveImage(null) }}><img src={active[0]} alt={active[1]} /><button type="button" onClick={() => setActiveImage(null)} aria-label="Zamknij podgląd">×</button></div>}
+  </>
 }
+import { useEffect, useState } from 'react'
