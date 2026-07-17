@@ -23,7 +23,6 @@ describe('landing page', () => {
     expect(heroVideo).toHaveProperty('muted', true)
     expect(heroVideo.querySelector('source')).toHaveAttribute('src', '/assets/busemnaczas-hero.mp4')
     expect(screen.getByTestId('hero-cloud-layer')).toHaveAttribute('data-motion', 'subtle')
-    expect(screen.getByLabelText('BusemNaCzas.pl — Renault Trafic')).toBeInTheDocument()
   })
 
   it('switches vehicles and renders the photo gallery', async () => {

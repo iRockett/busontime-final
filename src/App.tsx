@@ -47,10 +47,7 @@ function App() {
     <main id="top">
       <section className="hero hero-image-only" aria-label="BusemNaCzas.pl — Renault Trafic">
         <div className="hero-full-media">
-          <picture className="hero-static-poster">
-            <source media="(max-width: 680px)" srcSet="/assets/renault-trafic-hero.webp" />
-            <img src="/assets/busemnaczas-hero-brand.webp" width="2048" height="1152" alt="" aria-hidden="true" />
-          </picture>
+          <img className="hero-static-poster" src="/assets/busemnaczas-hero-brand.webp" width="2048" height="1152" alt="" aria-hidden="true" />
           <video className="hero-video" aria-label="Renault Trafic BusemNaCzas.pl w trasie" autoPlay muted loop playsInline preload="metadata" poster="/assets/busemnaczas-hero-brand.webp">
             <source src="/assets/busemnaczas-hero.mp4" type="video/mp4" />
           </video>
