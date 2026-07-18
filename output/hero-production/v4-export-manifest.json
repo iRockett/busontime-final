@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "fps": 30,
+  "audio": false,
+  "loop": false,
+  "source": {
+    "sha256": "0EAB32E6BD26848E9724C21247C33EA6C6A0030E1A99B60448DCCE5E511AD83E",
+    "codec": "h264",
+    "width": 1280,
+    "height": 660,
+    "durationSeconds": 5.04,
+    "fps": 24.01,
+    "frameCount": 121,
+    "audio": false,
+    "bytes": 3253535
+  },
+  "files": {
+    "hero-v4.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "bytes": 2074292
+    },
+    "hero-v4.webm": {
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "audio": false,
+      "bytes": 1117809
+    },
+    "mobile-v4.mp4": {
+      "width": 900,
+      "height": 1440,
+      "fps": 30,
+      "audio": false,
+      "bytes": 1041738
+    },
+    "mobile-v4.webm": {
+      "width": 900,
+      "height": 1440,
+      "fps": 30,
+      "audio": false,
+      "bytes": 675179
+    },
+    "poster-v4.webp": {
+      "width": 1920,
+      "height": 1080,
+      "format": "webp",
+      "bytes": 127916
+    },
+    "poster-v4.jpg": {
+      "width": 1920,
+      "height": 1080,
+      "format": "jpeg",
+      "bytes": 198450
+    },
+    "mobile-v4.webp": {
+      "width": 900,
+      "height": 1440,
+      "format": "webp",
+      "bytes": 74952
+    }
+  }
+}

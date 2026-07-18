@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "encodedFrames": 120,
+  "validationFrame": 120,
+  "formats": {
+    "desktop": {
+      "frame0Sha256": "ec8cf046b81dd5b624ab39d1706764baac2934ab3eefef14ef23d640939a3c0f",
+      "frameValidationSha256": "ec8cf046b81dd5b624ab39d1706764baac2934ab3eefef14ef23d640939a3c0f",
+      "dimensions": {
+        "width": 1920,
+        "height": 1080
+      }
+    },
+    "mobile": {
+      "frame0Sha256": "c33dd772ed58d9645b900239869239ea2828dcbe051c3a16011d4ac076a958c9",
+      "frameValidationSha256": "c33dd772ed58d9645b900239869239ea2828dcbe051c3a16011d4ac076a958c9",
+      "dimensions": {
+        "width": 1080,
+        "height": 1920
+      }
+    }
+  },
+  "frameDirectories": {
+    "desktop": "work/hero/frames/desktop",
+    "mobile": "work/hero/frames/mobile"
+  }
+}

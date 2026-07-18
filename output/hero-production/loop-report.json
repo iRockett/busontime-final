@@ -1,0 +1,73 @@
+{
+  "passed": true,
+  "unencoded": {
+    "sha256": "ec8cf046b81dd5b624ab39d1706764baac2934ab3eefef14ef23d640939a3c0f",
+    "comparison": {
+      "maxDelta": 0,
+      "meanDelta": 0,
+      "changedPixels": 0
+    }
+  },
+  "encoded": {
+    "hero-v3.mp4": {
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 4,
+      "fps": 30,
+      "frameCount": 120,
+      "audio": false,
+      "bytes": 1061696,
+      "boundary": {
+        "maxDelta": 76,
+        "meanDelta": 0.7145423418209876,
+        "changedPixels": 488802
+      },
+      "normal": {
+        "maxDelta": 77,
+        "meanDelta": 0.4378438464506173,
+        "changedPixels": 246539
+      },
+      "boundaryRatio": 1.6319570267195205
+    },
+    "hero-v3.webm": {
+      "width": 1920,
+      "height": 1080,
+      "durationSeconds": 4,
+      "fps": 30,
+      "frameCount": 120,
+      "audio": false,
+      "bytes": 466541,
+      "boundary": {
+        "maxDelta": 76,
+        "meanDelta": 0.48548466435185184,
+        "changedPixels": 332659
+      },
+      "normal": {
+        "maxDelta": 73,
+        "meanDelta": 0.4679957561728395,
+        "changedPixels": 278375
+      },
+      "boundaryRatio": 1.0373698007905725
+    },
+    "mobile-v3.mp4": {
+      "width": 1080,
+      "height": 1920,
+      "durationSeconds": 4,
+      "fps": 30,
+      "frameCount": 120,
+      "audio": false,
+      "bytes": 466778,
+      "boundary": {
+        "maxDelta": 75,
+        "meanDelta": 0.39684702932098764,
+        "changedPixels": 383027
+      },
+      "normal": {
+        "maxDelta": 77,
+        "meanDelta": 0.14101755401234567,
+        "changedPixels": 109407
+      },
+      "boundaryRatio": 2.8141675843153884
+    }
+  }
+}
