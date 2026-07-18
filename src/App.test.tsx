@@ -15,37 +15,54 @@ describe('landing page', () => {
     expect(screen.queryByText('k. Kępna')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Dwa busy. Pełna swoboda podróży.' })).toBeInTheDocument()
     expect(screen.queryByText('Dwa Trafiki. Jeden standard podróży.')).not.toBeInTheDocument()
-    const heroVideo = screen.getByLabelText('Renault Trafic BusemNaCzas.pl w trasie')
-    expect(heroVideo).toHaveAttribute('autoplay')
-    expect(heroVideo).toHaveAttribute('loop')
-    expect(heroVideo).toHaveAttribute('playsinline')
-    expect(heroVideo).toHaveAttribute('poster', '/assets/busemnaczas-hero-brand.webp')
-    expect(heroVideo).toHaveProperty('muted', true)
-    expect(heroVideo.querySelector('source')).toHaveAttribute('src', '/assets/busemnaczas-hero.mp4')
-    expect(screen.getByTestId('hero-cloud-layer')).toHaveAttribute('data-motion', 'subtle')
+    expect(screen.queryByLabelText('Renault Trafic BusemNaCzas.pl w trasie')).not.toBeInTheDocument()
+    expect(screen.getByTestId('hero-poster-picture').querySelector('img')).toHaveAttribute('src', '/assets/hero-static.webp')
   })
 
   it('switches vehicles and renders the photo gallery', async () => {
     const user = userEvent.setup()
     render(<App />)
-    expect(screen.getByAltText(/Renault Trafic brązowy/)).toHaveAttribute('src', '/assets/renault-trafic-brazowy-portrait.png')
+    expect(screen.getByAltText(/Renault Trafic brązowy/)).toHaveAttribute('src', '/assets/renault-trafic-brazowy.webp')
     await user.click(screen.getByRole('tab', { name: 'Stalowy' }))
     expect(await screen.findByText('Hak holowniczy')).toBeInTheDocument()
-    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy-portrait-extended.png')
-    expect(screen.getByRole('img', { name: 'Szary Renault Trafic z przodu' })).toHaveAttribute('src', '/assets/gallery-02.png')
+    expect(screen.getByAltText(/Renault Trafic stalowy/)).toHaveAttribute('src', '/assets/renault-trafic-stalowy.webp')
+    expect(screen.getByRole('img', { name: 'Stalowy Renault Trafic z przodu' })).toHaveAttribute('src', '/assets/renault-trafic-stalowy.webp')
     expect(screen.getAllByRole('img', { name: /Renault Trafic/ }).length).toBe(7)
-    await user.click(screen.getByRole('button', { name: 'Powiększ zdjęcie: Szary Renault Trafic z przodu' }))
-    expect(screen.getByRole('dialog', { name: 'Szary Renault Trafic z przodu' })).toBeInTheDocument()
-    await user.click(screen.getByRole('button', { name: 'Zamknij podgląd' }))
+    const galleryTrigger = screen.getByRole('button', { name: 'Powiększ zdjęcie: Stalowy Renault Trafic z przodu' })
+    await user.click(galleryTrigger)
+    expect(screen.getByRole('dialog', { name: 'Stalowy Renault Trafic z przodu' })).toBeInTheDocument()
+    const closeButton = screen.getByRole('button', { name: 'Zamknij podgląd' })
+    expect(closeButton).toHaveFocus()
+    await user.click(closeButton)
     expect(screen.queryByRole('dialog')).not.toBeInTheDocument()
+    expect(galleryTrigger).toHaveFocus()
   })
 
   it('opens and closes the mobile navigation', async () => {
+    const user = userEvent.setup()
     render(<App />)
     fireEvent.click(screen.getByLabelText('Otwórz menu'))
     expect(screen.getByLabelText('Nawigacja mobilna')).toBeInTheDocument()
-    fireEvent.click(screen.getByLabelText('Zamknij menu'))
+    await user.keyboard('{Escape}')
     expect(screen.queryByLabelText('Nawigacja mobilna')).not.toBeInTheDocument()
+  })
+
+  it('does not load decorative motion when reduced motion is requested', () => {
+    const originalMatchMedia = window.matchMedia
+    window.matchMedia = (query: string) => ({
+      matches: query === '(prefers-reduced-motion: reduce)',
+      media: query,
+      onchange: null,
+      addEventListener: () => undefined,
+      removeEventListener: () => undefined,
+      addListener: () => undefined,
+      removeListener: () => undefined,
+      dispatchEvent: () => true,
+    })
+    render(<App />)
+    expect(screen.queryByLabelText('Renault Trafic BusemNaCzas.pl w trasie')).not.toBeInTheDocument()
+    expect(screen.getByTestId('hero-poster-picture')).toBeInTheDocument()
+    window.matchMedia = originalMatchMedia
   })
 
   it('discloses FAQ content and confirms a valid contact request', async () => {

@@ -1,0 +1,12 @@
+{
+  "desktop": {
+    "webp": "hero-static.webp",
+    "width": 1672,
+    "height": 941
+  },
+  "mobile": {
+    "webp": "hero-static-1280.webp",
+    "width": 1280,
+    "height": 720
+  }
+}

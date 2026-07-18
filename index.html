@@ -9,12 +9,17 @@
     <meta property="og:title" content="BusemNaCzas.pl — wynajem 9-osobowych busów" />
     <meta property="og:description" content="Wygodny, bezpieczny i gotowy na każdą podróż." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="/assets/busemnaczas-hero-brand.webp" />
+    <meta property="og:image" content="/assets/hero-static.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600;650;700&display=swap" rel="stylesheet" />
+    <link rel="preload" as="image" href="/assets/hero-static.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-static-1280.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high" />
+    <style>
+      .initial-hero{height:100svh;padding-top:82px;overflow:hidden;background:#101a22}
+      .initial-hero picture,.initial-hero img{display:block;width:100%;height:calc(100svh - 82px)}
+      .initial-hero img{object-fit:cover}
+      @media(max-width:680px){.initial-hero{height:auto;padding-top:68px}.initial-hero picture{height:auto;min-height:0;max-height:none;aspect-ratio:1672/941}.initial-hero img{height:100%;min-height:0;max-height:none}}
+    </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRental","name":"BusemNaCzas.pl","telephone":"+48514574594","areaServed":["Wieruszów","Kępno","Ostrzeszów","Syców","Kluczbork","Wieluń","Złoczew"],"makesOffer":{"@type":"Offer","itemOffered":{"@type":"Car","name":"Renault Trafic LONG","vehicleSeatingCapacity":9}}}</script>
   </head>
-  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+  <body><div id="root"><div class="initial-hero" aria-hidden="true"><picture><source media="(max-width: 680px)" srcset="/assets/hero-static-1280.webp" type="image/webp" /><img src="/assets/hero-static.webp" width="1672" height="941" fetchpriority="high" alt="" /></picture></div></div><script type="module" src="/src/main.tsx"></script></body>
 </html>

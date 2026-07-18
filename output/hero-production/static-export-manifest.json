@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "animated": false,
+  "source": {
+    "width": 1672,
+    "height": 941,
+    "bytes": 2440681,
+    "sha256": "f67cd9c72883eed0f13b5873c65fade37972d20802e2cb86ac7ab94b8c9148d9"
+  },
+  "assets": {
+    "hero-static.webp": {
+      "width": 1672,
+      "height": 941,
+      "format": "webp",
+      "bytes": 1298926,
+      "sha256": "4e226b655c337d5583bf6ca59ff00286ae1c27f4b08cb234ef2dc8dca0bdebbd"
+    },
+    "hero-static-1280.webp": {
+      "width": 1280,
+      "height": 720,
+      "format": "webp",
+      "bytes": 119626,
+      "sha256": "f77c57ba84b16db473df4e1a661f9472be6388d89b70b8aa72af0e34f9ce194e"
+    }
+  }
+}

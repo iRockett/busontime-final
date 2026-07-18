@@ -16,7 +16,7 @@ export function VehicleShowcase() {
         <motion.div key={vehicle.id} className="vehicle-grid" initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }} transition={{ duration: .35 }}>
           <div className="vehicle-media image-zoom">
             <span className="vehicle-media-bg" aria-hidden="true" style={{ backgroundImage: `url(${vehicle.image})` }} />
-            <img className="vehicle-media-image" src={vehicle.image} alt={`Renault Trafic ${vehicle.finish.toLowerCase()} — 9-osobowy bus`} width="1536" height="1088" loading="lazy" />
+            <img className="vehicle-media-image" src={vehicle.image} alt={`Renault Trafic ${vehicle.finish.toLowerCase()} — 9-osobowy bus`} width={vehicle.imageWidth} height={vehicle.imageHeight} loading="lazy" decoding="async" />
           </div>
           <div className="vehicle-copy">
             <p className="section-index">0{index + 1} / 02</p>

@@ -1,7 +1,7 @@
 import Lenis from 'lenis'
 import { MotionConfig } from 'framer-motion'
 import { Armchair, BadgeCheck, Banknote, Bike, CalendarRange, Check, Clock3, Gauge, Luggage, MapPin, MapPinned, Phone, Route, ShieldCheck, Snowflake, Truck, Users, Wrench } from 'lucide-react'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { siteContent } from './content'
 import { Contact } from './components/Contact'
 import { Faq } from './components/Faq'
@@ -33,28 +33,38 @@ function SectionHeading({ label, title, copy }: { label: string; title: string; 
 }
 
 function App() {
+  const [motionAllowed, setMotionAllowed] = useState(() => (
+    typeof window.matchMedia !== 'function'
+    || !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ))
+
   useEffect(() => {
-    if (navigator.userAgent.includes('jsdom')) return
+    if (typeof window.matchMedia !== 'function') return
+    const preference = window.matchMedia('(prefers-reduced-motion: reduce)')
+    const update = () => setMotionAllowed(!preference.matches)
+    update()
+    preference.addEventListener('change', update)
+    return () => preference.removeEventListener('change', update)
+  }, [])
+
+  useEffect(() => {
+    if (!motionAllowed || navigator.userAgent.includes('jsdom')) return
     const lenis = new Lenis({ lerp: .085, wheelMultiplier: .9 })
     let frame = 0
     const raf = (time: number) => { lenis.raf(time); frame = requestAnimationFrame(raf) }
     frame = requestAnimationFrame(raf)
     return () => { cancelAnimationFrame(frame); lenis.destroy() }
-  }, [])
+  }, [motionAllowed])
 
   return <MotionConfig reducedMotion="user">
     <Nav />
     <main id="top">
       <section className="hero hero-image-only" aria-label="BusemNaCzas.pl — Renault Trafic">
         <div className="hero-full-media">
-          <img className="hero-static-poster" src="/assets/busemnaczas-hero-brand.webp" width="2048" height="1152" alt="" aria-hidden="true" />
-          <video className="hero-video" aria-label="Renault Trafic BusemNaCzas.pl w trasie" autoPlay muted loop playsInline preload="metadata" poster="/assets/busemnaczas-hero-brand.webp">
-            <source src="/assets/busemnaczas-hero.mp4" type="video/mp4" />
-          </video>
-          <span className="hero-cloud-layer" data-testid="hero-cloud-layer" data-motion="subtle" aria-hidden="true" />
-          <div className="hero-logo-overlay" aria-hidden="true">
-            <img src="/assets/busemnaczas-logo-hero.svg" alt="" />
-          </div>
+          <picture className="hero-static-poster" data-testid="hero-poster-picture" aria-hidden="true">
+            <source media="(max-width: 680px)" srcSet="/assets/hero-static-1280.webp" type="image/webp" />
+            <img src="/assets/hero-static.webp" width="1672" height="941" fetchPriority="high" decoding="sync" alt="" />
+          </picture>
         </div>
       </section>
 
