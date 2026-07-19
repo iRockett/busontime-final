@@ -4,8 +4,8 @@
   "source": {
     "width": 1672,
     "height": 941,
-    "bytes": 2434620,
-    "sha256": "9b7d3ce83b6c73f391779b810f582d68a021216c6b92e0cdc684afb6ebdacd1c"
+    "bytes": 1788400,
+    "sha256": "0c6652c654b807986389bc35e468bee943baadd650edc2128318f782cc945f7d"
   },
   "mobileSource": {
     "width": 1086,
@@ -18,15 +18,15 @@
       "width": 1672,
       "height": 941,
       "format": "webp",
-      "bytes": 1308942,
-      "sha256": "94d4390a2ac823c81ab71d9310b9065959b598e38ae8499c04765b57e93ccd38"
+      "bytes": 1298926,
+      "sha256": "4e226b655c337d5583bf6ca59ff00286ae1c27f4b08cb234ef2dc8dca0bdebbd"
     },
     "hero-static-1280.webp": {
       "width": 1280,
       "height": 720,
       "format": "webp",
-      "bytes": 120584,
-      "sha256": "b4c5626399ece6ad42ef081e573ddc5b89ef680747eacc8104093473d6847fa0"
+      "bytes": 119626,
+      "sha256": "f77c57ba84b16db473df4e1a661f9472be6388d89b70b8aa72af0e34f9ce194e"
     },
     "hero-mobile-portrait.webp": {
       "width": 1086,

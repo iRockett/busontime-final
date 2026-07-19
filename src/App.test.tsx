@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import App from './App'
 
 describe('landing page', () => {
@@ -69,8 +69,10 @@ describe('landing page', () => {
     window.matchMedia = originalMatchMedia
   })
 
-  it('discloses FAQ content and confirms a valid contact request', async () => {
+  it('discloses FAQ content and sends a valid contact request once', async () => {
     const user = userEvent.setup()
+    const fetchMock = vi.fn().mockResolvedValue({ ok: true })
+    vi.stubGlobal('fetch', fetchMock)
     render(<App />)
     const faqButton = screen.getByRole('button', { name: 'Jak wygląda rezerwacja?' })
     await user.click(faqButton)
@@ -79,7 +81,32 @@ describe('landing page', () => {
     await user.type(screen.getByLabelText('Imię'), 'Jan')
     await user.type(screen.getByLabelText('Telefon'), '500 500 500')
     await user.type(screen.getByLabelText('Termin'), '12–14 lipca')
+    await user.type(screen.getByLabelText('Wiadomość'), 'Proszę o kontakt')
     await user.click(screen.getByRole('button', { name: 'Wyślij zapytanie' }))
+    expect(fetchMock).toHaveBeenCalledOnce()
+    expect(fetchMock).toHaveBeenCalledWith('/api/contact', expect.objectContaining({ method: 'POST', headers: { 'Content-Type': 'application/json' }, body: expect.any(String) }))
+    expect(JSON.parse(fetchMock.mock.calls[0][1].body)).toMatchObject({ name: 'Jan', phone: '500 500 500', date: '12–14 lipca', message: 'Proszę o kontakt', website: '' })
     expect(screen.getByRole('status')).toHaveTextContent('Dziękujemy')
+    expect(screen.getByLabelText('Imię')).toHaveValue('')
+    vi.unstubAllGlobals()
+  })
+
+  it('disables the form while sending and preserves values when the API fails', async () => {
+    const user = userEvent.setup()
+    let rejectRequest: (reason?: unknown) => void = () => undefined
+    const fetchMock = vi.fn(() => new Promise((_, reject) => { rejectRequest = reject }))
+    vi.stubGlobal('fetch', fetchMock)
+    render(<App />)
+    await user.type(screen.getByLabelText('Imię'), 'Jan')
+    await user.type(screen.getByLabelText('Telefon'), '500 500 500')
+    await user.type(screen.getByLabelText('Termin'), '12–14 lipca')
+    await user.click(screen.getByRole('button', { name: 'Wyślij zapytanie' }))
+    expect(screen.getByRole('button', { name: 'Wysyłanie…' })).toBeDisabled()
+    await user.click(screen.getByRole('button', { name: 'Wysyłanie…' }))
+    expect(fetchMock).toHaveBeenCalledOnce()
+    rejectRequest(new Error('network'))
+    expect(await screen.findByRole('alert')).toHaveTextContent('Nie udało się')
+    expect(screen.getByLabelText('Imię')).toHaveValue('Jan')
+    vi.unstubAllGlobals()
   })
 })

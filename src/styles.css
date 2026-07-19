@@ -189,6 +189,9 @@ img { display: block; max-width: 100%; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: #2e7de1; box-shadow: 0 0 0 3px rgba(46,125,225,.16); }
 .full-field { grid-column: 1/-1; }
 .contact-form .button { border: 0; cursor: pointer; }
+.contact-form .button:disabled { cursor: wait; opacity: .7; }
+.contact-honeypot { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.form-status-error { color: #f7b4b4; }
 .form-status { margin: 0; display: flex; align-items: flex-start; gap: 9px; color: #b9c4d2; font-size: 12px; line-height: 1.5; }
 .form-status svg { width: 18px; flex: 0 0 auto; color: #70b5ff; }
 .footer { padding: 52px 0 30px; background: #fff; }
