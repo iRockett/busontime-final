@@ -21,7 +21,8 @@ async function readBody(request: IncomingMessage & { body?: unknown }): Promise<
 function validSingleLine(value: string, min: number, max: number) { return value.length >= min && value.length <= max && !/[\r\n]/.test(value) }
 function validate(payload: ContactPayload): ContactValues | null {
   if (typeof payload.name !== 'string' || typeof payload.phone !== 'string' || typeof payload.date !== 'string' || (payload.message !== undefined && typeof payload.message !== 'string')) return null
-  const name = payload.name.trim(), phone = payload.phone.trim(), date = payload.date.trim(), message = (payload.message ?? '').trim()
+  const messageValue = typeof payload.message === 'string' ? payload.message : ''
+  const name = payload.name.trim(), phone = payload.phone.trim(), date = payload.date.trim(), message = messageValue.trim()
   const phoneDigits = phone.replace(/\D/g, '')
   if (!validSingleLine(name, 2, 80) || !validSingleLine(date, 2, 100) || phoneDigits.length < 9 || phoneDigits.length > 15 || message.length > 2_000) return null
   return { name, phone, date, message }

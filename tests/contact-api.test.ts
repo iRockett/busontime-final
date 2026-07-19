@@ -4,7 +4,7 @@ const sendMail = vi.hoisted(() => vi.fn())
 const createTransport = vi.hoisted(() => vi.fn(() => ({ sendMail })))
 vi.mock('nodemailer', () => ({ default: { createTransport } }))
 
-import handler from './contact'
+import handler from '../api/contact'
 
 const originalEnv = { ...process.env }
 const validPayload = { name: ' Jan ', phone: '+48 500 500 500', date: ' 12–14 lipca ', message: 'Proszę o kontakt', website: '', formStartedAt: Date.now() - 2_000 }
