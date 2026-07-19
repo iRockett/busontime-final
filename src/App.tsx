@@ -2,6 +2,7 @@ import Lenis from 'lenis'
 import { MotionConfig } from 'framer-motion'
 import { Armchair, BadgeCheck, Banknote, Bike, CalendarRange, Check, Clock3, Gauge, Luggage, MapPin, MapPinned, Phone, Route, ShieldCheck, Snowflake, Truck, Users, Wrench } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import { siteContent } from './content'
 import { Contact } from './components/Contact'
 import { Faq } from './components/Faq'
@@ -111,6 +112,7 @@ function App() {
     </main>
     <footer className="footer"><div className="container footer-top"><a className="footer-brand" href="#top" aria-label="BusemNaCzas.pl — strona główna"><img src="/assets/busemnaczas-footer-logo.png" alt="BusemNaCzas.pl" /></a><nav aria-label="Stopka">{siteContent.nav.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}</nav><a href={siteContent.phone.href}>{siteContent.phone.display}</a></div><div className="container footer-bottom"><span>© 2026 BusemNaCzas.pl</span><span>Polityka prywatności</span><a href="https://maps.google.com/?q=Wieruszów" target="_blank" rel="noreferrer">Google Maps</a></div></footer>
     <div className="mobile-cta"><a href={siteContent.phone.href}><Phone />Zadzwoń</a><a href="#kontakt">Zarezerwuj</a></div>
+    <SpeedInsights />
   </MotionConfig>
 }
 
