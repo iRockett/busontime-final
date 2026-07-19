@@ -8,5 +8,10 @@
     "webp": "hero-static-1280.webp",
     "width": 1280,
     "height": 720
+  },
+  "portrait": {
+    "webp": "hero-mobile-portrait.webp",
+    "width": 1086,
+    "height": 1448
   }
 }

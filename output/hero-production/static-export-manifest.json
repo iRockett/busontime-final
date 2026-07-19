@@ -4,23 +4,36 @@
   "source": {
     "width": 1672,
     "height": 941,
-    "bytes": 2440681,
-    "sha256": "f67cd9c72883eed0f13b5873c65fade37972d20802e2cb86ac7ab94b8c9148d9"
+    "bytes": 2434620,
+    "sha256": "9b7d3ce83b6c73f391779b810f582d68a021216c6b92e0cdc684afb6ebdacd1c"
+  },
+  "mobileSource": {
+    "width": 1086,
+    "height": 1448,
+    "bytes": 2487183,
+    "sha256": "897a13605b06d5d358df57bc30d2206ffb353aa758794542c16bda184b7053e7"
   },
   "assets": {
     "hero-static.webp": {
       "width": 1672,
       "height": 941,
       "format": "webp",
-      "bytes": 1298926,
-      "sha256": "4e226b655c337d5583bf6ca59ff00286ae1c27f4b08cb234ef2dc8dca0bdebbd"
+      "bytes": 1308942,
+      "sha256": "94d4390a2ac823c81ab71d9310b9065959b598e38ae8499c04765b57e93ccd38"
     },
     "hero-static-1280.webp": {
       "width": 1280,
       "height": 720,
       "format": "webp",
-      "bytes": 119626,
-      "sha256": "f77c57ba84b16db473df4e1a661f9472be6388d89b70b8aa72af0e34f9ce194e"
+      "bytes": 120584,
+      "sha256": "b4c5626399ece6ad42ef081e573ddc5b89ef680747eacc8104093473d6847fa0"
+    },
+    "hero-mobile-portrait.webp": {
+      "width": 1086,
+      "height": 1448,
+      "format": "webp",
+      "bytes": 1397248,
+      "sha256": "2e8b0ab619dcb187cb0e9e06d384af389ad2c4c8c1d49dd0660d6b2398db8ae7"
     }
   }
 }

@@ -62,16 +62,21 @@ function App() {
       <section className="hero hero-image-only" aria-label="BusemNaCzas.pl — Renault Trafic">
         <div className="hero-full-media">
           <picture className="hero-static-poster" data-testid="hero-poster-picture" aria-hidden="true">
-            <source media="(max-width: 680px)" srcSet="/assets/hero-static-1280.webp" type="image/webp" />
+            <source media="(max-width: 680px)" srcSet="/assets/hero-mobile-portrait.webp" type="image/webp" />
+            <source media="(max-width: 900px)" srcSet="/assets/hero-static-1280.webp" type="image/webp" />
             <img src="/assets/hero-static.webp" width="1672" height="941" fetchPriority="high" decoding="sync" alt="" />
           </picture>
+          <div className="hero-mobile-actions" data-testid="mobile-hero-actions" aria-label="Szybki kontakt">
+            <a className="button button-secondary" href={siteContent.phone.href}><Phone size={18} />Zadzwoń</a>
+            <a className="button button-primary" href="#kontakt">Zarezerwuj</a>
+          </div>
         </div>
       </section>
 
       <section className="hero-copy-section" aria-labelledby="hero-title">
         <div className="container intro-shell">
           <div className="intro-grid">
-            <h1 id="hero-title">Wynajem 9-osobowych busów Renault Trafic</h1>
+            <h1 id="hero-title" className="hero-title">Wynajem 9-osobowych busów Renault Trafic</h1>
             <div className="intro-details">
               <p className="hero-subtitle">Wygodny, bezpieczny i gotowy na każdą podróż.</p>
               <p className="hero-body">Wynajem krótko- i długoterminowy. Obsługujemy Wieruszów, Kępno, Ostrzeszów, Syców, Kluczbork, Wieluń i Złoczew.</p>

@@ -6,5 +6,5 @@ test('shipped hero is static, responsive, and source-faithful', async () => {
   const manifest = await verifyStaticHero({ writeReport: false })
   assert.equal(manifest.passed, true)
   assert.equal(manifest.animated, false)
-  assert.deepEqual(Object.keys(manifest.assets), ['hero-static.webp', 'hero-static-1280.webp'])
+  assert.deepEqual(Object.keys(manifest.assets), ['hero-static.webp', 'hero-static-1280.webp', 'hero-mobile-portrait.webp'])
 })

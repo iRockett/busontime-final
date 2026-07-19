@@ -4,7 +4,7 @@ Deterministic static hero optimization and verification.
 
 # Ownership
 
-- `source/hero-source.png`: exact user-supplied flattened artwork.
+- `source/hero-source.png` and `source/hero-mobile-source.png`: exact user-supplied flattened desktop and mobile artwork.
 - `browser-assets.json`: stable responsive output interface.
 - `config.mjs`: immutable geometry and path contract.
 - `build.mjs`: WebP production.

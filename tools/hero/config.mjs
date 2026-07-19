@@ -15,8 +15,10 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..')
 export const HERO_CONFIG = deepFreeze({
   root,
   sourcePath: path.join(root, 'tools/hero/source/hero-source.png'),
+  mobileSourcePath: path.join(root, 'tools/hero/source/hero-mobile-source.png'),
   outputDir: path.join(root, 'output/hero-production'),
   publicDir: path.join(root, 'public/assets'),
   source: { width: 1672, height: 941 },
+  mobileSource: { width: 1086, height: 1448 },
   browserAssets,
 })

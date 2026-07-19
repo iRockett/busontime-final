@@ -4,7 +4,7 @@ Browser-served vehicle, gallery, logo, font, and static hero assets.
 
 # Ownership
 
-The active hero uses `hero-static.webp` on desktop and `hero-static-1280.webp` on mobile.
+The active hero uses `hero-static.webp` on desktop, `hero-static-1280.webp` on tablet, and `hero-mobile-portrait.webp` at mobile widths up to 680px.
 
 # Local Contracts
 

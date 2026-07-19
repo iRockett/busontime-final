@@ -11,15 +11,18 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="/assets/hero-static.webp" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preload" as="image" href="/assets/hero-static.webp" type="image/webp" media="(min-width: 681px)" fetchpriority="high" />
-    <link rel="preload" as="image" href="/assets/hero-static-1280.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-static.webp" type="image/webp" media="(min-width: 901px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-static-1280.webp" type="image/webp" media="(min-width: 681px) and (max-width: 900px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="/assets/hero-mobile-portrait.webp" type="image/webp" media="(max-width: 680px)" fetchpriority="high" />
     <style>
       .initial-hero{height:100svh;padding-top:82px;overflow:hidden;background:#101a22}
       .initial-hero picture,.initial-hero img{display:block;width:100%;height:calc(100svh - 82px)}
       .initial-hero img{object-fit:cover}
-      @media(max-width:680px){.initial-hero{height:auto;padding-top:68px}.initial-hero picture{height:auto;min-height:0;max-height:none;aspect-ratio:1672/941}.initial-hero img{height:100%;min-height:0;max-height:none}}
+      @media(max-width:900px){.initial-hero{height:auto;padding-top:72px}.initial-hero picture{height:auto;min-height:0;max-height:none;aspect-ratio:16/9}.initial-hero img{height:100%;min-height:0;max-height:none}}
+      @media(max-width:900px) and (max-height:500px){.initial-hero{height:100svh}.initial-hero picture,.initial-hero img{height:calc(100svh - 72px);aspect-ratio:auto}}
+      @media(max-width:680px){.initial-hero{padding-top:68px}.initial-hero picture{aspect-ratio:3/4}}
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRental","name":"BusemNaCzas.pl","telephone":"+48514574594","areaServed":["Wieruszów","Kępno","Ostrzeszów","Syców","Kluczbork","Wieluń","Złoczew"],"makesOffer":{"@type":"Offer","itemOffered":{"@type":"Car","name":"Renault Trafic LONG","vehicleSeatingCapacity":9}}}</script>
   </head>
-  <body><div id="root"><div class="initial-hero" aria-hidden="true"><picture><source media="(max-width: 680px)" srcset="/assets/hero-static-1280.webp" type="image/webp" /><img src="/assets/hero-static.webp" width="1672" height="941" fetchpriority="high" alt="" /></picture></div></div><script type="module" src="/src/main.tsx"></script></body>
+  <body><div id="root"><div class="initial-hero" aria-hidden="true"><picture><source media="(max-width: 680px)" srcset="/assets/hero-mobile-portrait.webp" type="image/webp" /><source media="(max-width: 900px)" srcset="/assets/hero-static-1280.webp" type="image/webp" /><img src="/assets/hero-static.webp" width="1672" height="941" fetchpriority="high" alt="" /></picture></div></div><script type="module" src="/src/main.tsx"></script></body>
 </html>

@@ -11,12 +11,16 @@ describe('landing page', () => {
     expect(screen.getAllByRole('link', { name: 'Zarezerwuj' }).length).toBeGreaterThan(1)
     expect(screen.getAllByRole('link', { name: /514 574 594/ })[0]).toHaveAttribute('href', 'tel:+48514574594')
     expect(screen.getByLabelText('BusemNaCzas.pl — strona główna')).toBeInTheDocument()
+    expect(screen.getByLabelText('BusemNaCzas.pl — początek strony')).toBeInTheDocument()
     expect(screen.queryByText('k. Wieruszowa')).not.toBeInTheDocument()
     expect(screen.queryByText('k. Kępna')).not.toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'Dwa busy. Pełna swoboda podróży.' })).toBeInTheDocument()
     expect(screen.queryByText('Dwa Trafiki. Jeden standard podróży.')).not.toBeInTheDocument()
     expect(screen.queryByLabelText('Renault Trafic BusemNaCzas.pl w trasie')).not.toBeInTheDocument()
     expect(screen.getByTestId('hero-poster-picture').querySelector('img')).toHaveAttribute('src', '/assets/hero-static.webp')
+    expect(screen.getByTestId('hero-poster-picture').querySelector('source[media="(max-width: 680px)"]')).toHaveAttribute('srcset', '/assets/hero-mobile-portrait.webp')
+    expect(screen.getByTestId('mobile-hero-actions').querySelector('a[href="tel:+48514574594"]')).toHaveTextContent('Zadzwoń')
+    expect(screen.getByTestId('mobile-hero-actions').querySelector('a[href="#kontakt"]')).toHaveTextContent('Zarezerwuj')
   })
 
   it('switches vehicles and renders the photo gallery', async () => {

@@ -26,6 +26,7 @@ export function Nav() {
   return (
     <header className={`site-nav ${scrolled ? 'site-nav--scrolled' : ''}`}>
       <div className="container nav-inner">
+        <a className="brand nav-brand" href="#top" aria-label="BusemNaCzas.pl — początek strony">Busem<span>NaCzas</span>.pl</a>
         <nav className="desktop-nav" aria-label="Główna nawigacja">
           {siteContent.nav.map(([label, id]) => <a key={id} href={`#${id}`}>{label}</a>)}
         </nav>

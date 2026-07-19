@@ -30,30 +30,45 @@ async function assertStaticIntegration() {
 }
 
 export async function verifyStaticHero({ writeReport = true } = {}) {
-  const source = await fs.readFile(HERO_CONFIG.sourcePath)
-  const sourceMetadata = await sharp(source).metadata()
+  const [source, mobileSource] = await Promise.all([
+    fs.readFile(HERO_CONFIG.sourcePath),
+    fs.readFile(HERO_CONFIG.mobileSourcePath),
+  ])
+  const [sourceMetadata, mobileSourceMetadata] = await Promise.all([
+    sharp(source).metadata(),
+    sharp(mobileSource).metadata(),
+  ])
   if (sourceMetadata.width !== HERO_CONFIG.source.width || sourceMetadata.height !== HERO_CONFIG.source.height) {
     throw new Error(`Hero source must be ${HERO_CONFIG.source.width}x${HERO_CONFIG.source.height}`)
+  }
+  if (mobileSourceMetadata.width !== HERO_CONFIG.mobileSource.width || mobileSourceMetadata.height !== HERO_CONFIG.mobileSource.height) {
+    throw new Error(`Mobile hero source must be ${HERO_CONFIG.mobileSource.width}x${HERO_CONFIG.mobileSource.height}`)
   }
 
   const desktop = HERO_CONFIG.browserAssets.desktop
   const mobile = HERO_CONFIG.browserAssets.mobile
+  const portrait = HERO_CONFIG.browserAssets.portrait
   const assets = {
     [desktop.webp]: await inspectAsset(desktop.webp, desktop),
     [mobile.webp]: await inspectAsset(mobile.webp, mobile),
+    [portrait.webp]: await inspectAsset(portrait.webp, portrait),
   }
 
-  const [sourcePixels, desktopPixels] = await Promise.all([
+  const [sourcePixels, desktopPixels, mobileSourcePixels, portraitPixels] = await Promise.all([
     sharp(source).raw().toBuffer(),
     sharp(path.join(HERO_CONFIG.publicDir, desktop.webp)).raw().toBuffer(),
+    sharp(mobileSource).raw().toBuffer(),
+    sharp(path.join(HERO_CONFIG.publicDir, portrait.webp)).raw().toBuffer(),
   ])
   if (!sourcePixels.equals(desktopPixels)) throw new Error('Desktop WebP is not pixel-identical to the supplied source')
+  if (!mobileSourcePixels.equals(portraitPixels)) throw new Error('Portrait WebP is not pixel-identical to supplied mobile source')
 
   await assertStaticIntegration()
   const manifest = {
     passed: true,
     animated: false,
     source: { ...HERO_CONFIG.source, bytes: source.length, sha256: sha256(source) },
+    mobileSource: { ...HERO_CONFIG.mobileSource, bytes: mobileSource.length, sha256: sha256(mobileSource) },
     assets,
   }
 
